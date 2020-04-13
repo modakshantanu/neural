@@ -35,8 +35,8 @@ fn main() {
         println!("{} / {}", correct, testing.len());
 
     } else {
-        nn = net::Network::new(&vec![784,30,30,10]);
-        nn.train(&training, &testing, 100, 10, 1.5);
+        nn = net::Network::new(&vec![784,200,10]);
+        nn.train(&training, &testing, 10, 10, 1.5);
     }
     
     println!("Enter filename to save network");
