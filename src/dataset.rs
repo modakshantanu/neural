@@ -11,11 +11,7 @@ impl Sample {
     pub fn print(&self) {
         for row in &self.data {
             for i in row {
-                if *i < 0.5 {
-                    print!(".");
-                } else {
-                    print!("X");
-                }
+                print!("{:.2} ", i);
             }
             println!("");
         }

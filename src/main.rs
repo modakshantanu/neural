@@ -16,7 +16,7 @@ fn main() {
 
     let training = dataset::get_dataset(TRAIN_IMAGES, TRAIN_LABELS);
     let testing = dataset::get_dataset(TEST_IMAGES, TEST_LABELS);
-    
+
     let mut filename = String::new();
     println!("Enter filename of network config");
     io::stdin().read_line(&mut filename).unwrap();
@@ -35,8 +35,8 @@ fn main() {
         println!("{} / {}", correct, testing.len());
 
     } else {
-        nn = net::Network::new(&vec![784,30,10]);
-        nn.train(&training, &testing, 10, 10, 3.0);
+        nn = net::Network::new(&vec![784,30,30,10]);
+        nn.train(&training, &testing, 100, 10, 1.5);
     }
     
     println!("Enter filename to save network");
