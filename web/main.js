@@ -1,6 +1,6 @@
 
 var oReq = new XMLHttpRequest();
-oReq.open("GET", "https://cors-anywhere.herokuapp.com/https://github.com/modakshantanu/neural/blob/master/new.ncf?raw=true", true);
+oReq.open("GET", "https://smodak-cors-proxy.herokuapp.com/https://github.com/modakshantanu/neural/blob/master/new.ncf?raw=true", true);
 oReq.responseType = "arraybuffer";
 var data,view;
 var network;
